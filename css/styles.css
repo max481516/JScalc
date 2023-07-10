@@ -74,8 +74,9 @@ button:focus, textarea:focus, select:focus{
 .display__hist {
   opacity: 0.3;
   font-size: 30px;
-  padding-right: 7px;
+  width: 100%;
   padding-top: 20px;
+  padding-right: 7px;
 }
 
 .display__temp {
@@ -237,6 +238,10 @@ button:focus, textarea:focus, select:focus{
 
   .display {
     font-size: 40px;
+  }
+
+  .display__hist {
+    padding-right: 2px;
   }
 
   .btn button {
