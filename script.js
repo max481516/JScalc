@@ -8,6 +8,7 @@ const equalsEl = document.querySelector('.btn__equals');
 const acEl = document.querySelector('.btn__ac');
 const delEl = document.querySelector('.btn__del');
 
+
 let histDisplayNum = '';
 let inputDisplayNum = '';
 let result = null;
@@ -34,7 +35,7 @@ operationEl.forEach( operation => {
         if(histDisplayNum && inputDisplayNum && lastOperation) {
             mathOperation();
         } else {
-            result = parseFloat(inputDisplayNum);  // to make a string to a number
+            result = parseFloat(inputDisplayNum);  // to make a string a number
         }
         clearVar(operationName);
         lastOperation = operationName;
@@ -51,13 +52,13 @@ const clearVar = (name = '') => {
 }
 
 const mathOperation = () => {
-    if(lastOperation === '+') {
-        result = parseFloat(result) + parseFloat(inputDisplayNum);
+    if(lastOperation === '×') {
+        result = parseFloat(result) * parseFloat(inputDisplayNum);
     } else if(lastOperation === '-') {
         result = parseFloat(result) - parseFloat(inputDisplayNum);
-    } else if(lastOperation === '*') {
-        result = parseFloat(result) * parseFloat(inputDisplayNum);
-    } else if(lastOperation === '/') {
+    } else if(lastOperation === '+') {
+        result = parseFloat(result) + parseFloat(inputDisplayNum);
+    } else if(lastOperation === '÷') {
         result = parseFloat(result) / parseFloat(inputDisplayNum);
     } else if(lastOperation === '%') {
         result = parseFloat(result) % parseFloat(inputDisplayNum);
@@ -107,13 +108,14 @@ window.addEventListener('keydown', (e) => {
     } else if(
         e.key === '+' || 
         e.key === '-' || 
-         
-        e.key === '/' || 
+        e.key === '÷' || 
         e.key === '%'  
     ){
         clickOperation(e.key); 
     } else if(e.key === '*'){
-        clickOperation('x');
+        clickOperation('×');
+    } else if(e.key === '/'){
+        clickOperation('÷');
     } else if( e.key === 'Enter' || e.key === '='){
         clickEquals();
     } else if( e.key === 'Backspace') {
@@ -130,9 +132,9 @@ const clickButton = key => {
 }
 
 const clickOperation = key => {
-    operationEl.forEach( button => {
-        if(button.innerText === key) {
-            button.click();
+    operationEl.forEach( operation => {
+        if(operation.innerText === key) {
+            operation.click();
         }
     })
 }
