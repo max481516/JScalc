@@ -250,5 +250,9 @@ button:focus, textarea:focus, select:focus{
   .btn:active {
     background-color: #60758a;
   }
+
+  .icon {
+    height: 33px;
+  }
 }
 
