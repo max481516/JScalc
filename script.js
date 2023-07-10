@@ -17,6 +17,18 @@ let lastOperation = '';
 let haveDot = false;
 
 
+// Check if the page is being viewed on a mobile device
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+// Hide the address bar on page load for mobile devices
+if (isMobile) {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      window.scrollTo(0, 1);
+    }, 0);
+  });
+}
+
 const updateDisplay = () => {
     if (inputDisplayNum.length > MAX_DISPLAY_LENGTH) {
       inputDisplayEl.innerText = inputDisplayNum.slice(0, MAX_DISPLAY_LENGTH);
