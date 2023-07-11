@@ -98,8 +98,6 @@ button:focus, textarea:focus, select:focus{
   background-color: #d5d5d7;
   border: solid 0.2px black;
   text-align: center;
-  -webkit-appearance: none;
-  -webkit-tap-highlight-color: #60758a;
 }
 
 .btn button {
@@ -118,6 +116,7 @@ button:focus, textarea:focus, select:focus{
 
 .btn:active {
   background-color: #aa4b6b;
+  -webkit-tap-highlight-color: #60758a;
 }
 
 
@@ -258,6 +257,7 @@ button:focus, textarea:focus, select:focus{
 
   .btn:active {
     background-color: #60758a;
+    -webkit-tap-highlight-color: #60758a;
   }
 
   .icon {
