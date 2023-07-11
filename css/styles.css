@@ -260,12 +260,16 @@ button:focus, textarea:focus, select:focus{
     font-size: 25px;
   }
 
+  .btn {
+    -webkit-tap-highlight-color: #60758a;
+  }
+
   .btn:hover {
     background-color: #d5d5d7;
   }
 
   .btn:active {
-    -webkit-tap-highlight-color: #60758a;
+    background-color: #60758a;
   }
 
   .icon {
