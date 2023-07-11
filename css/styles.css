@@ -116,7 +116,6 @@ button:focus, textarea:focus, select:focus{
 
 .btn:active {
   background-color: #aa4b6b;
-  -webkit-tap-highlight-color: #60758a;
 }
 
 
@@ -126,49 +125,59 @@ button:focus, textarea:focus, select:focus{
 .btn__num0 {
   grid-row: 5/6;
   grid-column: 1/2;
+  color: black;
 }
 
 .btn__num1 {
   grid-row: 4/5;
   grid-column: 1/2;
+  color: black;
 }
 .btn__num2 {
   grid-row: 4/5;
   grid-column: 2/3;
+  color: black;
 }
 
 .btn__num3 {
   grid-row: 4/5;
   grid-column: 3/4;
+  color: black;
 }
 
 .btn__num4 {
   grid-row: 3/4;
   grid-column: 1/2;
+  color: black;
 }
 
 .btn__num5 {
   grid-row: 3/4;
   grid-column: 2/3;
+  color: black;
 }
 
 .btn__num6 {
   grid-row: 3/4;
   grid-column: 3/4;
+  color: black;
 }
 
 .btn__num7 {
   grid-row: 2/3;
   grid-column: 1/2;
+  color: black;
 }
 .btn__num8 {
   grid-row: 2/3;
   grid-column: 2/3;
+  color: black;
 }
 
 .btn__num9 {
   grid-row: 2/3;
   grid-column: 3/4;
+  color: black;
 }
 
 
@@ -205,11 +214,13 @@ button:focus, textarea:focus, select:focus{
 .btn__dot {
   grid-row: 5/6;
   grid-column: 2/3;
+  color: black;
 }
 
 .btn__equals {
   grid-row: 5/6;
   grid-column: 3/4;
+  color: black;
 }
 
 .btn__ac {
@@ -245,8 +256,6 @@ button:focus, textarea:focus, select:focus{
     padding-right: 2px;
   }
 
-  
-
   .btn button {
     font-size: 25px;
   }
@@ -256,7 +265,6 @@ button:focus, textarea:focus, select:focus{
   }
 
   .btn:active {
-    background-color: #60758a;
     -webkit-tap-highlight-color: #60758a;
   }
 
