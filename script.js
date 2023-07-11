@@ -9,6 +9,7 @@ const acEl = document.querySelector('.btn__ac');
 const delEl = document.querySelector('.btn__del');
 
 const MAX_DISPLAY_LENGTH = 11;
+const MAX_RESULT_LENGTH = 10;
 
 let histDisplayNum = '';
 let inputDisplayNum = '';
@@ -16,18 +17,6 @@ let result = null;
 let lastOperation = '';
 let haveDot = false;
 
-
-// Detect Device Type
-if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-    // When ready, auto-scroll 1px to hide URL bar
-    window.addEventListener("load", function () {
-        // Set a timeout...
-        setTimeout(function () {
-            // Hide the address bar!
-            window.scrollTo(0, 5);
-        }, 0);
-    });
-}
 
 
 const updateDisplay = () => {
@@ -101,7 +90,7 @@ const mathOperation = () => {
     } else if(lastOperation === '÷') {
         result = parseFloat(result) / parseFloat(inputDisplayNum);
     } else if(lastOperation === '%') {
-        result = parseFloat(result) % parseFloat(inputDisplayNum);
+        result = parseFloat(result) * (parseFloat(inputDisplayNum) / 100);
     } 
 }
 
