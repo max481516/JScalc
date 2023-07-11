@@ -24,7 +24,7 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
         // Set a timeout...
         setTimeout(function () {
             // Hide the address bar!
-            window.scrollTo(0, 1);
+            window.scrollTo(0, 5);
         }, 0);
     });
 }

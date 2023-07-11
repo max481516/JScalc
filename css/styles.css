@@ -98,6 +98,8 @@ button:focus, textarea:focus, select:focus{
   background-color: #d5d5d7;
   border: solid 0.2px black;
   text-align: center;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: #60758a;
 }
 
 .btn button {
@@ -243,6 +245,8 @@ button:focus, textarea:focus, select:focus{
   .display__hist {
     padding-right: 2px;
   }
+
+  
 
   .btn button {
     font-size: 25px;
