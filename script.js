@@ -16,7 +16,7 @@ let result = null;
 let lastOperation = '';
 let haveDot = false;
 
-
+window.scrollTo(0, 1)
 
 const updateDisplay = () => {
     if (inputDisplayNum.length > MAX_DISPLAY_LENGTH) {
@@ -27,7 +27,6 @@ const updateDisplay = () => {
     }
 };
 
-  
   
 numbersEl.forEach((number) => {
     number.addEventListener('click', (e) => {
@@ -83,18 +82,22 @@ const clearVar = (name = '') => {
 
 
 const mathOperation = () => {
-    if(lastOperation === '×') {
-        result = parseFloat(result) * parseFloat(inputDisplayNum);
-    } else if(lastOperation === '-') {
-        result = parseFloat(result) - parseFloat(inputDisplayNum);
-    } else if(lastOperation === '+') {
-        result = parseFloat(result) + parseFloat(inputDisplayNum);
-    } else if(lastOperation === '÷') {
-        result = parseFloat(result) / parseFloat(inputDisplayNum);
-    } else if(lastOperation === '%') {
-        result = parseFloat(result) * (parseFloat(inputDisplayNum) / 100);
-    } 
-}
+    if (lastOperation === '×') {
+      result = parseFloat(result) * parseFloat(inputDisplayNum);
+    } else if (lastOperation === '-') {
+      result = parseFloat(result) - parseFloat(inputDisplayNum);
+    } else if (lastOperation === '+') {
+      result = parseFloat(result) + parseFloat(inputDisplayNum);
+    } else if (lastOperation === '÷') {
+      result = parseFloat(result) / parseFloat(inputDisplayNum);
+    } else if (lastOperation === '%') {
+      result = parseFloat(result) * (parseFloat(inputDisplayNum) / 100);
+    }
+  
+    const roundedResult = parseFloat(result).toPrecision(MAX_DISPLAY_LENGTH);
+    result = roundedResult.toString();
+  };
+  
 
 equalsEl.addEventListener('click', () => {
     if(!histDisplayNum || !inputDisplayNum) return;
