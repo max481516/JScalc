@@ -92,9 +92,27 @@ const mathOperation = () => {
       result = parseFloat(result) * (parseFloat(inputDisplayNum) / 100);
     }
   
-    const roundedResult = parseFloat(result).toPrecision(MAX_DISPLAY_LENGTH);
-    result = roundedResult.toString();
+    // Convert result to string
+    result = result.toString();
+  
+    // Handle limiting decimal places for non-integer results
+    if (!Number.isInteger(parseFloat(result))) {
+      const integerPart = result.split('.')[0];
+      let decimalPart = result.split('.')[1];
+      
+      // Limit decimal places if necessary
+      if (decimalPart && decimalPart.length > MAX_DISPLAY_LENGTH - integerPart.length) {
+        decimalPart = decimalPart.slice(0, MAX_DISPLAY_LENGTH - integerPart.length);
+      }
+  
+      result = `${integerPart}${decimalPart ? '.' + decimalPart : ''}`;
+    } else {
+      result = result.length > MAX_DISPLAY_LENGTH ? 'ERR' : result;
+    }
   };
+  
+
+  
   
 
 equalsEl.addEventListener('click', () => {
