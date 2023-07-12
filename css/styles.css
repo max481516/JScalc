@@ -68,7 +68,8 @@ button:focus, textarea:focus, select:focus{
 .display__input {
   all: unset;
   background-color: inherit;
-  width: 100%;
+  
+  
 }
 
 .display__hist {
@@ -250,19 +251,22 @@ button:focus, textarea:focus, select:focus{
 
   .display {
     font-size: 40px;
+    padding-right: 35px;
+  }
+
+  .display__input {
+    padding-bottom: -20px;
   }
 
   .display__hist {
-    padding-right: 2px;
+    padding: 35px 2px 0 0;
   }
 
   .btn button {
     font-size: 25px;
-  }
-
-  .btn {
     -webkit-tap-highlight-color: #60758a;
   }
+
 
   .btn:hover {
     background-color: #d5d5d7;

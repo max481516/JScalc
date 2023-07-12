@@ -8,8 +8,7 @@ const equalsEl = document.querySelector('.btn__equals');
 const acEl = document.querySelector('.btn__ac');
 const delEl = document.querySelector('.btn__del');
 
-const MAX_DISPLAY_LENGTH = 11;
-const MAX_RESULT_LENGTH = 10;
+const MAX_DISPLAY_LENGTH = 10;
 
 let histDisplayNum = '';
 let inputDisplayNum = '';
@@ -22,12 +21,15 @@ let haveDot = false;
 const updateDisplay = () => {
     if (inputDisplayNum.length > MAX_DISPLAY_LENGTH) {
       inputDisplayEl.innerText = inputDisplayNum.slice(0, MAX_DISPLAY_LENGTH);
-    } else {
+    } 
+    else {
       inputDisplayEl.innerText = inputDisplayNum;
     }
-  };
+};
+
   
-  numbersEl.forEach((number) => {
+  
+numbersEl.forEach((number) => {
     number.addEventListener('click', (e) => {
       if (inputDisplayNum.length < MAX_DISPLAY_LENGTH) {
         if (e.target.innerText === '.' && !haveDot) {
@@ -39,7 +41,7 @@ const updateDisplay = () => {
         updateDisplay();
       }
     });
-  });
+});
 
 // numbersEl.forEach( number => {
 //     number.addEventListener('click', (e) => {
@@ -104,6 +106,10 @@ equalsEl.addEventListener('click', () => {
     inputDisplayNum = result;
     histDisplayNum = '';
 });
+
+
+
+  
 
 acEl.addEventListener('click', () => {
     histDisplayEl.innerText = '0';
