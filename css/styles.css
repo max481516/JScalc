@@ -39,15 +39,14 @@ select:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100dvh;
+  height: 100dvh;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 
 .calculator {
   box-shadow: 0 0 20px black;
-  width: 500px;
-  height: 700px;
+  height: 90dvh;
   text-align: center;
   display: flex;
   flex-direction: column;
