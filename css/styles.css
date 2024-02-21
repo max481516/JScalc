@@ -47,6 +47,7 @@ select:focus {
 .calculator {
   box-shadow: 0 0 20px black;
   height: 90dvh;
+  width: 30%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -237,7 +238,7 @@ select:focus {
 @media (max-width: 525px) {
   .calculator {
     width: 90%;
-    height: 650px;
+    height: 90dvh;
   }
 
   .display {
