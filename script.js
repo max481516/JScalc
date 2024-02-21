@@ -136,7 +136,9 @@ acEl.addEventListener('click', () => {
     inputDisplayEl.innerText = '0';
     inputDisplayNum = '';
     tempDisplayEl.innerText = '0';
-    result = '';
+    result = '0';
+    lastOperation = '';  // clear lastOperation
+    haveDot = false;  // clear haveDot
 });
 
 delEl.addEventListener('click', () => {
@@ -174,6 +176,8 @@ window.addEventListener('keydown', (e) => {
         clickEquals();
     } else if( e.key === 'Backspace') {
         clickDel();
+    } else if(e.key === 'Escape'){
+        clickAC();
     }
 });
 
@@ -199,6 +203,10 @@ const clickEquals = () => {
 
 const clickDel = () => {
     delEl.click();
+}
+
+const clickAC = () => {
+  acEl.click();
 }
 
 

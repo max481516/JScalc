@@ -6,42 +6,42 @@
 }
 
 html {
-    font-family: "Helvetica Neue";
-    background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b); 
+  font-family: "Helvetica Neue";
+  background: linear-gradient(to right, #3b8d99, #6b6b83, #aa4b6b);
 }
 
-input:focus, textarea:focus, select:focus{
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
 }
 
-button:focus, textarea:focus, select:focus{
+button:focus,
+textarea:focus,
+select:focus {
   outline: none;
 }
 
-  
 /* KEYFRAMES */
 
 @keyframes fade-in {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
 
   100% {
-      opacity: 1;
+    opacity: 1;
   }
 }
-
 
 /* MAIN STYLES */
 .app {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  max-height: 100vh;
+  height: 100svh;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
-  
 }
 
 .calculator {
@@ -55,10 +55,10 @@ button:focus, textarea:focus, select:focus{
 }
 
 .display {
-  height: 25%; 
+  height: 25%;
   width: 100%;
   text-align: right;
-  background-color:#a0a0b0;
+  background-color: #a0a0b0;
   border: solid 1px black;
   padding-right: 45px;
   font-size: 60px;
@@ -68,8 +68,6 @@ button:focus, textarea:focus, select:focus{
 .display__input {
   all: unset;
   background-color: inherit;
-  
-  
 }
 
 .display__hist {
@@ -93,8 +91,8 @@ button:focus, textarea:focus, select:focus{
   display: grid;
   grid-template-rows: repeat(5, 1fr);
   grid-template-columns: repeat(4, 1fr);
-  height: 100%; 
-  width: 100%; 
+  height: 100%;
+  width: 100%;
   cursor: pointer;
   background-color: #d5d5d7;
   border: solid 0.2px black;
@@ -118,10 +116,6 @@ button:focus, textarea:focus, select:focus{
 .btn:active {
   background-color: #aa4b6b;
 }
-
-
-
-
 
 .btn__num0 {
   grid-row: 5/6;
@@ -181,35 +175,34 @@ button:focus, textarea:focus, select:focus{
   color: black;
 }
 
-
 .btn__percent {
   grid-row: 1/2;
   grid-column: 4/5;
-  color: #5783db
+  color: #5783db;
 }
 
 .btn__divide {
   grid-row: 2/3;
   grid-column: 4/5;
-  color: #5783db
+  color: #5783db;
 }
 
 .btn__multiply {
   grid-row: 3/4;
   grid-column: 4/5;
-  color: #5783db
+  color: #5783db;
 }
 
 .btn__minus {
   grid-row: 4/5;
   grid-column: 4/5;
-  color: #5783db
+  color: #5783db;
 }
 
 .btn__plus {
   grid-row: 5/6;
   grid-column: 4/5;
-  color: #5783db
+  color: #5783db;
 }
 
 .btn__dot {
@@ -241,7 +234,6 @@ button:focus, textarea:focus, select:focus{
   color: #aa4b6b;
 }
 
-
 /* MEDIA QUERIES */
 @media (max-width: 525px) {
   .calculator {
@@ -267,7 +259,6 @@ button:focus, textarea:focus, select:focus{
     -webkit-tap-highlight-color: #60758a;
   }
 
-
   .btn:hover {
     background-color: #d5d5d7;
   }
@@ -280,4 +271,3 @@ button:focus, textarea:focus, select:focus{
     height: 33px;
   }
 }
-
