@@ -39,7 +39,7 @@ select:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100svh;
+  min-height: 100svh;
   width: 100%;
   -webkit-tap-highlight-color: transparent;
 }
